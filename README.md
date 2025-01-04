@@ -31,5 +31,7 @@ pip install -r requirements.txt
 
 # 注意事项
 
-运行前请先修改```cfg.yaml```里面的参数
+1.运行前请先修改```cfg.yaml```里面的参数。
+
+2.如果选择的是```MNIST```或```FashionMNIST```数据集，运行代码时会自动下载数据集，无需自己手动下载。
 
