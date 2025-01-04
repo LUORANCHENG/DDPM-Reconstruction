@@ -1,0 +1,8 @@
+ipykernel
+natsort
+matplotlib
+einops
+imageio
+pyyaml
+tqdm
+numpy==1.26.4

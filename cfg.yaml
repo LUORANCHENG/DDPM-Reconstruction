@@ -1,0 +1,28 @@
+dataset_params:
+  datasets_name: 'MNIST'  # 数据集名称：MNIST, FashionMNIST, Custom(自定义数据集)
+  im_path: 'datasets/'  # 数据集路径
+
+diffusion_params:
+  num_timesteps : 1000  # 总的时间步数
+  beta_start : 0.0001  # 加噪权重起始值
+  beta_end : 0.02  # 加噪权重终止值
+
+model_params:
+  im_channels: 1  # 图像通道
+  im_size : 28  # 图像尺寸
+  down_channels : [32, 64, 128, 256]  # 下采样通道数变化
+  mid_channels : [256, 256, 128]  # 中间层通道数变化
+  down_sample : [True, True, False]  # 是否启用分辨率减半的下采样
+  time_emb_dim : 128  # 时间步嵌入维度
+  num_down_layers : 2  # 下采样中每个块的ResNet + 注意力层的数量
+  num_mid_layers : 2  # 瓶颈层中每个块的ResNet + 注意力层的数量
+  num_up_layers : 2  # 上采样中每个块的ResNet + 注意力层的数量
+  num_heads : 4  # 多头注意力数
+
+train_params:
+  train_flag: True  # 是否训练
+  task_name: 'mission1'  # 输出的文件夹名称
+  batch_size: 64  # 批处理大小
+  num_epochs: 40  # 总训练轮次
+  num_samples : 16  # 推理时采样多少张图片
+  lr: 0.0001  # 学习率
